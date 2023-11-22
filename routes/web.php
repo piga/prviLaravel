@@ -22,6 +22,7 @@ Route::get('/', function () {
 
 Route::get("/sum", [ZbrojKontroler::class, "add"]);
 
+Route::get("/form", [ZbrojKontroler::class, "prikazi"]);
 
-
+Route::post("/zbroji", [ZbrojKontroler::class, "zbroji"]);
 
