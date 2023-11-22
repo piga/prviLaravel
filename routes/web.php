@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ZbrojKontroler;
+use App\Http\Controllers\OsobaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,3 +27,7 @@ Route::get("/form", [ZbrojKontroler::class, "prikazi"]);
 
 Route::post("/zbroji", [ZbrojKontroler::class, "zbroji"]);
 
+//slijede rute za osobe iz baze
+Route::get("/form_osoba", [OsobaController::class, "form"]);
+Route::post("/store", [OsobaController::class, "store"]);
+Route::get("/show", [OsobaController::class, "show"]);
